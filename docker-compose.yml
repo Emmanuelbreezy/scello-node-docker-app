@@ -1,0 +1,22 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: scelloo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: emma@postgres123
+    ports:
+      - "5432:5432"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+
+

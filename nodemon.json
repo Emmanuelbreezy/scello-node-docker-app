@@ -1,0 +1,6 @@
+{
+    "watch": ["/app","."],
+    "ext": "json,js",
+    "exec": "node index.js",
+    "legacy-watch": true
+  }
