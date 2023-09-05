@@ -1,5 +1,9 @@
 // swagger.js
 const swaggerJsDoc = require('swagger-jsdoc');
+require('dotenv').config();
+
+const  url  = process.env.APP_URL;
+const description = process.env.NODE_ENV === "development" ? 'Development server' : "Production server";
 
 const options = {
   definition: {
@@ -15,8 +19,8 @@ const options = {
     },
     servers: [
         {
-          url: 'http://localhost:5000',
-          description: 'Development server',
+          url: url,
+          description: description
         },
       ],
   },
