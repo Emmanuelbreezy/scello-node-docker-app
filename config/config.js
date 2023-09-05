@@ -21,6 +21,6 @@ module.exports ={
     username: process.env.PGUSER,
     password: process.env.PGPASSWORD,
     host: process.env.PGHOST || 'postgres',
-    ssl: true,
+    //ssl: true,
   }
 }
